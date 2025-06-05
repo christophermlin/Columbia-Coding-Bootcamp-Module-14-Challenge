@@ -28,6 +28,8 @@ This project is a full-stack Kanban board application built with React, TypeScri
    DB_NAME=kanban_db
    DB_USER=your_db_user
    DB_PASSWORD=your_db_password
+   DB_HOST=localhost
+   DB_PORT=5432
    JWT_SECRET=your_jwt_secret
    ```
 3. **Seed the database:**
