@@ -47,7 +47,7 @@ This project is a full-stack Kanban board application built with React, TypeScri
    - Username: `RadiantComet` | Password: `password`
 
 ## Deployment
-- The app is ready for deployment to Render or any platform supporting Node.js and PostgreSQL. Link: <>
+- The app is ready for deployment to Render or any platform supporting Node.js and PostgreSQL. Link: <https://columbia-coding-bootcamp-module-14.onrender.com>
 - Set environment variables in your deployment platform as in your `.env` file.
 
 ## Screenshots
