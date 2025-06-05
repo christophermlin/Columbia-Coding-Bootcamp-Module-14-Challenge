@@ -51,9 +51,9 @@ This project is a full-stack Kanban board application built with React, TypeScri
 - Set environment variables in your deployment platform as in your `.env` file.
 
 ## Screenshots
-![Login Required](./Assets/ScreenCapture01.png)
-![Login Page](./Assets/ScreenCapture02.png)
-![Main Kanban Board](./Assets/ScreenCapture03.png)
+![Login Required](/Assets/ScreenCapture01.png)
+![Login Page](/Assets/ScreenCapture02.png)
+![Main Kanban Board](/Assets/ScreenCapture03.png)
 
 ---
 © 2025 Christopher Lin. Bootcamp Full-Stack React Challenge.
