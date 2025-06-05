@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  font-family: 'Inter Tight', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* webkit solution */
+::-webkit-input-placeholder { 
+  text-align:right; 
+}
+
+/* mozilla solution */
+input:-moz-placeholder { 
+  text-align:right; 
+}
+
+a {
+  font-weight: 500;
+  color: #000000;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  background: #f4f5f7;
+  color: #222;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  /* Add a subtle wood texture background */
+  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button, .form button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #5aac44; /* Kanban green */
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.25s;
+}
+button:hover, .form button:hover {
+  background: #519839;
+  border-color: #519839;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+main {
+  color: black;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+tr {
+  border-radius: 10px;
+  background-color: #000;
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #333333;
+}
+
+/* Navbar Content */
+.nav {
+  display: flex;
+  padding: 1em 2em;
+}
+
+.nav ul {
+  display: flex;
+  margin-left: auto;
+  flex-direction: row;
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  font-weight: 900;
+  color: #5a3a1b; /* dark brown for wood look */
+}
+
+.nav-title a {
+  color: inherit;
+}
+
+.nav-item {
+  display: block;
+  margin-left: auto;
+  list-style: none;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.table {
+  width: 80vw;
+  table-layout: fixed;
+}
+
+.board {
+  background: rgba(255,255,255,0.95); /* slightly transparent to show wood */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 32px 24px;
+  margin-top: 32px;
+  width: 100vw;
+  max-width: none;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.board-display {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.swimlane {
+  text-align: center;
+  font-weight: 500;
+  width: 33%;
+  height: 90vh; 
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 5px;
+  padding: 5px;
+  background: #ebecf0;
+  border-radius: 8px;
+  padding: 16px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 1px 4px #0001;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.todo {
+  background-color: #e9cbec;
+}
+
+.inprogress {
+  background-color: #b864c4;
+}
+
+.done {
+  background-color: #732381;
+}
+
+.ticket-card {
+  text-align: left;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 0.1em solid black;
+}
+
+.ticket {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px #0001;
+  padding: 16px;
+  margin-bottom: 8px;
+  border-left: 6px solid #5aac44;
+}
+
+.ticket.done {
+  border-left-color: #0079bf;
+}
+
+.ticket.in-progress {
+  border-left-color: #f2d600;
+}
+
+.container {
+  width: 100vw;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 32px 0;
+  box-sizing: border-box;
+}
+
+#create-ticket-link {
+  display: block;
+  margin-left: auto;
+}
+
+
+.form {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 2px 8px #0001;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px 24px;
+}
+
+.form > h1, .form > label {
+  color: #5a3a1b;
+}
+
+.form > input, .form > textarea, .form > select {
+  color: #222;
+  background: #f4f5f7;
+  border: 1px solid #ccc;
+}
+
+input, select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form > label {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.form button {
+  margin-top: 2.5%;
+  background: #5aac44;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.form textarea {
+  resize: both;
+  min-height: 30px;
+  min-width: 30px;
+}
+
+.editBtn {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.deleteBtn {
+  background-color: #f9f9f9;
+  font-weight: 500;
+  color: black;
+  text-decoration: inherit;
+}
+
+.deleteBtn:hover {
+  color: #535bf2;
+}
+
+.login-notice {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  padding: 32px 24px;
+  margin: 40px auto;
+  max-width: 2160px;
+  text-align: center;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
